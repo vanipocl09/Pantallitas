@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <link rel="stylesheet" href="equipoC.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+           .corner-buttons {
+            position: absolute;
+            top: 10px;
+            right: 120px; /* Ajusta la posición a la derecha */
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .corner-buttons a {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-options a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .logo {
+            float: left;
+            margin-right: 10px;
+        }
+
+        nav {
+            clear: both;
+            margin-left: 100px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        /* Nuevos estilos para la tabla */
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th, .table td {
+            border: 2px solid #ddd; /* Aumenta el grosor del borde */
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f5f5f5; /* Cambia el color de fondo */
+        }
+
+        /* Nuevos estilos para las líneas adicionales */
+        .linea {
+            border-top: 2px solid #ddd; /* Aumenta el grosor del borde */
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Nuevos estilos para los botones */
+        .botones {
+        margin-top: 20px;
+        text-align: right; /* Change this line to move the buttons to the right */
+        }
+
+        .botones button {
+        margin: 5px;
+        background-color: #808080; /* Color gris */
+        color: #fff; /* Texto blanco */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="logo-button-container">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="everlink.png" alt="Logo" style="max-width: 100px; max-height: 100px;">
+        </div>
+    </div>
+
+    <div class="corner-buttons">
+        <a class="corner-button" href="notificaciones.html">&#128276;</a>
+        <a class="corner-button" href="mensajes.html">&#9993;</a>
+        <a class="corner-button" href="perfil.html">&#128100;</a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &#9660;
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="#">Configuracion</a>
+                <a class="dropdown-item" href="#">Cerrar sesion</a>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#inicio">Pagina principal</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Tabla de Datos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Antigüedad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí puedes insertar filas con datos -->
+                <tr>
+                    <td>1</td>
+                    <td>Ejemplo</td>
+                    <td>Descripción de ejemplo</td>
+                    <td>2023-11-13</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Otro Ejemplo</td>
+                    <td>Otra descripción</td>
+                    <td>2023-11-14</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tercer Ejemplo</td>
+                    <td>Descripción adicional</td>
+                    <td>2023-11-15</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Juan</td>
+                    <td>Descripción adicional</td>
+                    <td>2023-11-16</td>
+                </tr>
+                <!-- Puedes agregar más filas según tus necesidades -->
+            </tbody>
+        </table>
+        
+        <!-- Líneas adicionales -->
+        <div class="linea"></div>
+        <div class="linea"></div>
+
+        <!-- Botones adicionales -->
+        <div class="botones">
+            <button type="button" class="btn btn-primary">Orden de Compra</button>
+            <button type="button" class="btn btn-success">Agregar</button>
+            <button type="button" class="btn btn-secondary">Volver</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

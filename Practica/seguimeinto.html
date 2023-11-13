@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EVERLINK Solicitud Pagina principal</title>
+    <style>
+        /* Estilos CSS para el logotipo y el texto */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px; /* Ajusta el tamaño del logo de EVERLINK */
+            margin-right: 10px;
+        }
+
+        .solicitud {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        /* Estilos CSS para centrar y dar color a "Página principal" */
+        .centered-text {
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid #000;
+            padding: 10px;
+            background-color: #e0e0ff; /* Color de fondo morado */
+        }
+
+        /* Estilos CSS para los botones "Volver" e "Inicio" */
+        .buttons {
+            float: right; /* Para alinear los botones a la derecha */
+            margin-top: 20px;
+            margin-right: 20px; /* Margen derecho para alinear a la derecha */
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #999; /* Color de fondo gris */
+            color: black; /* Texto en negro */
+            font-weight: bold; /* Texto en negritas */
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilos CSS para los botones en la esquina superior derecha */
+        .corner-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            margin: 10px;
+        }
+
+        .corner-button {
+            background-color: transparent; /* Fondo transparente */
+            border: none;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 24px;
+        }
+
+        /* Estilos CSS para los logotipos de informe */
+        .informe-logo {
+            display: block;
+            width: 80px; /* Ajusta el tamaño de los logotipos de informe */
+            margin: 40px auto 20px; /* Margen superior e inferior para separarlos de "Página principal" */
+        }
+
+        .line {
+            text-align: center;
+            border-bottom: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <div class="logo-container">
+        <img class="logo" src="logo.jpg" alt="Logo de EVERLINK">
+        <h2 class="Informe">Informe</h2>
+    </div>
+
+    <h3 class="centered-text">
+        Pagina principal
+    </h3>
+
+    <!-- Agrega los logotipos de informe con una línea separadora -->
+    <img class="informe-logo" src="logo_informe_1.jpg" alt="Informe 1">
+    <div class="line"></div>
+    <img class="informe-logo" src="logo_informe_2.jpg" alt="Informe 2">
+
+    <!-- Agrega los botones "Volver" e "Inicio" más abajo y a la derecha -->
+    <div class="buttons">
+        <button class="button">Volver</button>
+        <button class="button">Inicio</button>
+    </div>
+
+    <!-- Agrega los botones en la esquina superior derecha como iconos -->
+    <div class="corner-buttons">
+        <a class="corner-button" href="perfil.html">&#128100;</a>
+        <a class="corner-button" href="mensajes.html">&#9993;</a>
+        <a class="corner-button" href="notificaciones.html">&#128276;</a>
+    </div>
+
+    <form action="">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

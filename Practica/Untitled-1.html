@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilo para los botones */
+        .button-container {
+            text-align: center;
+            margin-top: 50px; /* Espacio superior para separar los botones del contenido superior */
+        }
+
+        .button-container-wrapper {
+            text-align: center; /* Centra horizontalmente el contenido */
+            padding: 10px; /* Agrega un poco de espacio alrededor del contenido */
+        }
+
+        .button-container {
+            display: inline-block; /* Mostrar los contenedores de botones en línea */
+            margin: 0 10px; /* Espacio entre los botones */
+        }
+
+        .button-container button {
+            padding: 5px 8px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            margin-top: 5px; /* Ajusta el margen superior del botón */
+            margin-bottom: 5px; /* Ajusta el margen inferior del botón */
+        }
+
+        .button-container button:hover {
+            background-color: #ddd;
+        }
+
+        .button-container img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-right: 5px;
+        }
+
+        .logo {
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Estilo para el elemento <nav> */
+        nav {
+            clear: both; /* Forzar que el <nav> aparezca debajo de elementos flotantes anteriores */
+            margin-left: 100px; /* Ajusta el margen izquierdo para moverlo a la derecha */
+            background-color: #333; /* Fondo de color gris oscuro */
+            color: #fff; /* Texto en color blanco */
+            padding: 10px; /* Espacio interno para el contenido del <nav> */
+        }
+
+        nav a {
+            text-decoration: none; /* Eliminar subrayado de los enlaces dentro del <nav> */
+            color: #fff; /* Texto de los enlaces en color blanco */
+            margin-right: 20px; /* Espacio entre los enlaces */
+        }
+
+        /* Estilo para el botón y las imágenes */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px; /* Aumenta el espacio superior e inferior del header */
+        }
+
+        .corner-buttons {
+            position: absolute;
+            top: 10px;
+            right: 60px; /* Ajusta la posición a la izquierda */
+            margin: 10px;
+        }
+
+        .corner-button {
+            background-color: transparent; /* Fondo transparente */
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .corner-buttons1 {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            margin-right: 30px; /* Ajusta el margen derecho según tus preferencias */
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-options a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options a:hover {
+            background-color: #f0f0f0;
+        }
+
+        #images-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #images-container img {
+            max-width: 20px; /* Ajusta el ancho de las imágenes */
+            max-height: 20px; /* Ajusta el alto de las imágenes */
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="logo-button-container">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="everlink.png" alt="Logo" style="max-width: 100px; max-height: 100px;">
+        </div>
+    </div>
+    
+    <div class="corner-buttons">
+        <a class="corner-button" href="notificaciones.html">&#128276;</a>
+        <a class="corner-button" href="mensajes.html">&#9993;</a>
+        <a class="corner-button" href="perfil.html">&#128100;</a>
+    </div>
+
+    <!-- Mueve el botón de opciones al lado de los botones de la esquina superior derecha -->
+    <div class="dropdown">
+        <button class="btn btn-light corner-buttons1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            &#9660; <!-- Flecha hacia abajo -->
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Opción 1</a>
+            <a class="dropdown-item" href="#">Opción 2</a>
+            <a class="dropdown-item" href="#">Opción 3</a>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#inicio">Pagina principal</a>
+    </nav>
+
+    <div class="button-container-wrapper">
+        <section id="inicio">
+        <div class="button-container">
+            <button onclick="mostrarSolicitud()">
+                <img src="solicitud.png" alt="Solicitud">
+                Solicitud
+            </button>
+        </div>
+        <div class="button-container">
+            <button onclick="mostrarSeguimiento()">
+                <img src="seguimiento.png" alt="Seguimiento">
+                Seguimiento
+            </button>
+        </div>
+        <div class="button-container">
+            <button onclick="mostrarInforme()">
+                <img src="informe.jpg" alt="Informe">
+                Informe
+            </button>
+        </div>
+    </div>
+
+    <!-- Agrega los scripts de Bootstrap al final del cuerpo del documento -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function mostrarSeguimiento() {
+            // Aquí puedes agregar el código para mostrar el contenido de seguimiento
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Seguimiento</h1><p>Contenido de seguimiento.</p>";
+        }
+
+        function mostrarSolicitud() {
+            // Aquí puedes agregar el código para mostrar el contenido de solicitud
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Solicitud</h1><p>Contenido de solicitud.</p>";
+        }
+
+        function mostrarInforme() {
+            // Aquí puedes agregar el código para mostrar el contenido de informe
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Informe</h1><p>Contenido de informe.</p>";
+        }
+    </script>
+</body>
+</html>

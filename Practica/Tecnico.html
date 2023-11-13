@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Tu estilo existente aquí ... */
+        /* Estilo para los botones */
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button-container-wrapper {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .button-container {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .button-container button {
+            padding: 5px 8px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .button-container button:hover {
+            background-color: #ddd;
+        }
+
+        .button-container img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-right: 5px;
+        }
+
+        .logo {
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Estilo para el elemento <nav> */
+        nav {
+            clear: both;
+            margin-left: 100px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        /* Estilo para el botón y las imágenes */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .corner-buttons {
+            position: absolute;
+            top: 10px;
+            right: 120px; /* Ajusta la posición a la derecha */
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .corner-buttons a {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-options a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options a:hover {
+            background-color: #f0f0f0;
+        }
+
+        #images-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #images-container img {
+            max-width: 20px;
+            max-height: 20px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="logo-button-container">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="everlink.png" alt="Logo" style="max-width: 100px; max-height: 100px;">
+        </div>
+    </div>
+
+    <div class="corner-buttons">
+        <a class="corner-button" href="notificaciones.html">&#128276;</a>
+        <a class="corner-button" href="mensajes.html">&#9993;</a>
+        <a class="corner-button" href="perfil.html">&#128100;</a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &#9660;
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="#">Configuración</a>
+                <a class="dropdown-item" href="#">Cerrar sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#inicio">Pagina principal</a>
+    </nav>
+
+    <div class="button-container-wrapper">
+        <section id="inicio">
+            <div class="button-container">
+                <button onclick="mostrarSolicitud()">
+                    <img src="solicitudes.png" alt="Solicitudes">
+                    Solicitudes
+                </button>
+            </div>
+            <div class="button-container">
+                <button onclick="mostrarSeguimiento()">
+                    <img src="reparaciones.jpg" alt="Reparaciones">
+                    Reparaciones
+                </button>
+            </div>
+        </section>
+        <section id="abajo">
+            <div class="button-container">
+                <button onclick="mostrarInforme()">
+                    <img src="equipo.jpg" alt="Equipos">
+                    Equipos
+                </button>
+            </div>
+            <div class="button-container">
+                <button onclick="mostrarComponentes()">
+                    <img src="componentes.png" alt="Componentes">
+                    Componentes
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function mostrarSeguimiento() {
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Seguimiento</h1><p>Contenido de seguimiento.</p>";
+        }
+
+        function mostrarSolicitud() {
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Solicitud</h1><p>Contenido de solicitud.</p>";
+        }
+
+        function mostrarComponentes() {
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Componentes</h1><p>Contenido de componentes.</p>";
+        }
+
+        function mostrarInforme() {
+            document.getElementById("contenido").innerHTML = "<h1>Sección de Informe</h1><p>Contenido de informe.</p>";
+        }
+    </script>
+</body>
+</html>
